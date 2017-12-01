@@ -1,0 +1,34 @@
+# ----------- CONFIGURABLE START -----------
+title:            "Caos"
+description:      
+url:              http://caosbad.github.io # Site url, without a slash at the end.
+signoff:          "Caos" # Your name
+disqus_shortname: "mrcaos"
+facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
+google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
+share:            false # Turn on twitter and facebook share buttons
+
+links:
+  - name:         Posts
+    url:          /
+    external:     false
+  - name:         Category
+    url:          /category.html
+  - name:         RSS
+    url:          /atom.xml
+  - name:         GitHub
+    url:          http://github.com/caosbad
+    external:     true
+  - name:         About
+    url:          /about
+    external:     false
+# ------------ CONFIGURABLE END ------------
+highlighter:      pygments
+permalink:        /:year/:month/:day/:title
+markdown:         redcarpet
+redcarpet:
+  extensions:
+    - smart
+defaults:
+  - values:
+      layout: "default"
