@@ -16,6 +16,8 @@ links:
     external:     false
   - name:         Category
     url:          /category.html
+  - name:         Gallery
+    url:          /gallery.html
   - name:         RSS
     url:          /atom.xml
   - name:         GitHub
