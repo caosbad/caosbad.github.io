@@ -3,7 +3,6 @@ layout: default
 title: Gallery
 ---
 
-<link rel="stylesheet" href="assets/css/main.css" />
 <div id="main">
     {% for image in site.static_files %} {% if image.path contains 'fulls' %}
     <article class="thumb">
@@ -15,11 +14,3 @@ title: Gallery
     </article>
     {% endif %} {% endfor %}
 </div>
-<script src="{{ site.url }}/assets/js/jquery.min.js"></script>
-<script src="{{ site.url }}/assets/js/jquery.poptrox.js"></script>
-<script src="{{ site.url }}/assets/js/skel.min.js"></script>
-<script src="{{ site.url }}/assets/js/util.js"></script>
-<script src="{{ site.url }}/assets/js/exif.js"></script>
-<!--[if lte IE 8]>
-  <script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="{{ site.url }}/assets/js/main.js"></script>
