@@ -1,5 +1,9 @@
---- layout: page title: Gallery ---
-<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" />
+---
+layout: default
+title: Gallery
+---
+
+<link rel="stylesheet" href="assets/css/main.css" />
 <div id="main">
     {% for image in site.static_files %} {% if image.path contains 'fulls' %}
     <article class="thumb">
