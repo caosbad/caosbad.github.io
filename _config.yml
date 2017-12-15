@@ -19,6 +19,7 @@ links:
     external:     false
   - name:         Gallery
     url:          /gallery.html
+    external:     false
   - name:         RSS
     url:          /atom.xml
   - name:         GitHub
