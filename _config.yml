@@ -16,6 +16,7 @@ links:
     external:     false
   - name:         Category
     url:          /category.html
+    external:     false
   - name:         Gallery
     url:          /gallery.html
   - name:         RSS
