@@ -1,0 +1,21 @@
+--- layout: page title: Gallery ---
+<link rel="stylesheet" href="assets/css/main.css" />
+<div id="main">
+    {% for image in site.static_files %} {% if image.path contains 'fulls' %}
+    <article class="thumb">
+        <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
+            <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt="" data-name="{{ image.name }}" />
+        </a>
+        <!--<h2></h2>
+                <p></p>-->
+    </article>
+    {% endif %} {% endfor %}
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.poptrox.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/exif.js"></script>
+<!--[if lte IE 8]>
+  <script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>

@@ -7,6 +7,8 @@ disqus_shortname: "mrcaos"
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
 share:            false # Turn on twitter and facebook share buttons
+image_fulls_loc: "/images/fulls"
+image_thumbs_loc: "/images/thumbs"
 
 links:
   - name:         Posts
