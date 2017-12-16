@@ -1471,6 +1471,7 @@
 				position: absolute;
 				top: 0;
 				width: 100%;
+				margin: 5px;
 			}
 
 			#main .thumb > .image {
@@ -1484,6 +1485,7 @@
 				position: absolute;
 				top: 0;
 				width: 100%;
+				margin:5px;
 			}
 
 			#main .thumb > h2 {

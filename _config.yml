@@ -16,9 +16,9 @@ links:
   - name:         Category
     url:          /category.html
     external:     false
-  # - name:         Gallery
-  #   url:          /gallery.html
-  #   external:     false
+  - name:         Gallery
+    url:          /gallery.html
+    external:     false
   - name:         RSS
     url:          /atom.xml
   - name:         GitHub
@@ -37,3 +37,12 @@ redcarpet:
 defaults:
   - values:
       layout: "default"
+
+
+#MiniMagick
+#https://github.com/zroger/jekyll-minimagick
+# mini_magick:
+#     images:
+#         source: images/fulls
+#         destination: images/thumbnails
+#         resize: "320x180"
