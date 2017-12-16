@@ -2,3 +2,6 @@ _site/
 .sass-cache
 .ruby-version
 .DS_Store
+package.json
+node_modules/
+images/origin/
