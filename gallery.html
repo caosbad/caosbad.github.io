@@ -2,6 +2,7 @@
 layout: default
 title: Gallery
 ---
+<link rel="stylesheet" href="{{ site.url }}/asserts/css/main.css" type='text/css' />
 
 <div id="main">
     {% for image in site.static_files %} {% if image.path contains 'fulls' %}
@@ -14,3 +15,11 @@ title: Gallery
     </article>
     {% endif %} {% endfor %}
 </div>
+<script src="{{ site.url }}/asserts/js/jquery.min.js"></script>
+<script src="{{ site.url }}/asserts/js/jquery.poptrox.js"></script>
+<script src="{{ site.url }}/asserts/js/skel.min.js"></script>
+<script src="{{ site.url }}/asserts/js/util.js"></script>
+<script src="{{ site.url }}/asserts/js/exif.js"></script>
+<!--[if lte IE 8]>
+  <script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="{{ site.url }}/asserts/js/main.js"></script>
