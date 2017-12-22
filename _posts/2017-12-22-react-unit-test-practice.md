@@ -70,6 +70,7 @@ wrapper.last() => ReactWrapper
 
 ...
 
+
 ```
 
 
@@ -103,11 +104,14 @@ export function snapShotTest(component, options = {}) {
 
 大部分查询节点都会返回 Wrapper 对象，API 可以进行链式调用。
 
+
 ```JavaScript
+
 
 it('should render phone value correctly ', () => {
   expect(wrapper.find('input').at(0)).toHaveValue('18500000001')
 })
+
 
 ```
 
@@ -118,6 +122,7 @@ it('should render phone value correctly ', () => {
 
 
 ```JavaScript
+
 
 // 受控组件值变化验证，来自父组件 props value 值的变化
 it('should onChange  called ', () => {
@@ -132,10 +137,12 @@ it('should click correctly', () => {
   expect(wrapper.find('.am-notice-bar-marquee-wrap')).toBeEmpty()
 })
 
+
 ```
 
 
 #### 事件模拟接口 `simulate`
+
 
 
 ```JavaScript
