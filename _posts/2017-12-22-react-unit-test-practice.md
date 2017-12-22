@@ -8,6 +8,7 @@ category: tech
 
 ### Jest
 
+
 ```javascript
 // 定义测试组
 describe('Component test suite', function() {
@@ -20,13 +21,17 @@ describe('Component test suite', function() {
     expect(...).toBe(...)
   })
 })
+
 ```
+
 
 [Expect API ](http://facebook.github.io/jest/docs/en/expect.html#content) 与 [Mock Functions](http://facebook.github.io/jest/docs/en/mock-function-api.html#content) API
 
 ### enzyme-matchers
 
+
 enzyme-matcher 可以看做是对 Jest 与 enzyme api 的一层封装，简化调用。
+
 
 ```javascript
 toBeChecked()
@@ -39,17 +44,20 @@ toIncludeText()
 toHaveValue()
 toMatchElement()
 toMatchSelector()
+
 ```
 
 ### enzyme
 
-* shallow - 快速渲染组件，但不渲染其子组件，速度快但无法测试子组件，简单测试。
-* mount - 速度慢，但是渲染子组件，并执行生命周期函数，适合完成复杂测试。
-* render - 依赖 cherryIO 库完生成 HTML 结果，适合快照渲染。
+- shallow - 快速渲染组件，但不渲染其子组件，速度快但无法测试子组件，简单测试。
+- mount - 速度慢，但是渲染子组件，并执行生命周期函数，适合完成复杂测试。
+- render - 依赖 cherryIO 库完生成 HTML 结果，适合快照渲染。
 
 enzyme 提供了 ReactWrapper API ，在调用渲染 API 后会得到一个 React 包装对象，可以通过包装对象提供的 API 获取要测试的节点状态。
 
+
 ```JavaScript
+
 wrapper.find(selector) => ReactWrapper
 
 wrapper.contains(nodeOrNodes) => Boolean
@@ -61,13 +69,17 @@ wrapper.first() => ReactWrapper
 wrapper.last() => ReactWrapper
 
 ...
+
 ```
+
 
 ### 渲染测试
 
 使用 enzyme render 函数生成组件快照，每次运行测试会对比原有快照和新生成的是否相同。
 
+
 ```javascript
+
 /**
  * @param {node} component - ReactWrapper
  * @param {object} options - 渲染配置
@@ -82,23 +94,31 @@ export function snapShotTest(component, options = {}) {
     // MockDate.reset()
   })
 }
+
 ```
 
+
 #### 链式调用
+
 
 大部分查询节点都会返回 Wrapper 对象，API 可以进行链式调用。
 
 ```JavaScript
+
 it('should render phone value correctly ', () => {
   expect(wrapper.find('input').at(0)).toHaveValue('18500000001')
 })
+
 ```
 
 #### 数据模拟接口
 
+
 可以通过 `setState` 和 `setProps` 接口模拟组件内外部状态变化，从而达到测试组件状态动态改变时响应的 UI 是否做出了正确改变。
 
+
 ```JavaScript
+
 // 受控组件值变化验证，来自父组件 props value 值的变化
 it('should onChange  called ', () => {
   expect(wrapper.find('.picker-input-text').text()).toBe('2')
@@ -111,11 +131,15 @@ it('should click correctly', () => {
   wrapper.setState({ show: false })
   expect(wrapper.find('.am-notice-bar-marquee-wrap')).toBeEmpty()
 })
+
 ```
+
 
 #### 事件模拟接口 `simulate`
 
+
 ```JavaScript
+
 const onChange = jest.fn()
 const mockEvent = {
   key: 'Click',
@@ -127,6 +151,8 @@ it('should delete correctly', () => {
   item.simulate('click', mockEvent) // 模拟 click 方法
   expect(onChange).toBeCalled() // 检验 onChange 函数调用
 })
+
 ```
+
 
 `2017-12-22`
