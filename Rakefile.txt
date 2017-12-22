@@ -3,7 +3,6 @@ task :default do
   pids = [
     spawn("bundle exec jekyll server -w"),
     spawn("scss --watch _assets:stylesheets"),
-    spawn("mv assets _assets:assets"),
     spawn("coffee -b -w -o javascripts -c _assets/*.coffee")
   ]
  

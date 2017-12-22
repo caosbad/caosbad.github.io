@@ -7,8 +7,8 @@ disqus_shortname: "mrcaos"
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
 share:            false # Turn on twitter and facebook share buttons
-# image_fulls_loc: "/images/fulls"
-# image_thumbs_loc: "/images/thumbs"
+image_fulls_loc: "/images/fulls"
+image_thumbs_loc: "/images/thumbs"
 
 links:
   - name:         Posts
@@ -17,9 +17,9 @@ links:
   - name:         Category
     url:          /category.html
     external:     false
-  # - name:         Gallery
-  #   url:          /gallery.html
-  #   external:     false
+  - name:         Gallery
+    url:          /gallery.html
+    external:     false
   - name:         RSS
     url:          /atom.xml
   - name:         GitHub
@@ -31,10 +31,19 @@ links:
 # ------------ CONFIGURABLE END ------------
 highlighter:      pygments
 permalink:        /:year/:month/:day/:title
-markdown:         redcarpet
+markdown:         kramdown
 redcarpet:
   extensions:
     - smart
 defaults:
   - values:
       layout: "default"
+
+
+#MiniMagick
+#https://github.com/zroger/jekyll-minimagick
+# mini_magick:
+#     images:
+#         source: images/fulls
+#         destination: images/thumbnails
+#         resize: "320x180"
