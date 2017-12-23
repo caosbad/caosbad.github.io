@@ -9,7 +9,8 @@ category: tech
 ### Jest
 
 
-```javascript
+```js
+
 // 定义测试组
 describe('Component test suite', function() {
   // 测试单元
@@ -33,7 +34,8 @@ describe('Component test suite', function() {
 enzyme-matcher 可以看做是对 Jest 与 enzyme api 的一层封装，简化调用。
 
 
-```javascript
+```js
+
 toBeChecked()
 toBeDisabled()
 toBeEmpty()
@@ -45,7 +47,9 @@ toHaveValue()
 toMatchElement()
 toMatchSelector()
 
+
 ```
+
 
 ### enzyme
 
@@ -56,7 +60,9 @@ toMatchSelector()
 enzyme 提供了 ReactWrapper API ，在调用渲染 API 后会得到一个 React 包装对象，可以通过包装对象提供的 API 获取要测试的节点状态。
 
 
-```JavaScript
+
+```js
+
 
 wrapper.find(selector) => ReactWrapper
 
@@ -71,6 +77,7 @@ wrapper.last() => ReactWrapper
 ...
 
 
+
 ```
 
 
@@ -79,7 +86,7 @@ wrapper.last() => ReactWrapper
 使用 enzyme render 函数生成组件快照，每次运行测试会对比原有快照和新生成的是否相同。
 
 
-```javascript
+```js
 
 /**
  * @param {node} component - ReactWrapper
@@ -96,6 +103,7 @@ export function snapShotTest(component, options = {}) {
   })
 }
 
+
 ```
 
 
@@ -105,7 +113,7 @@ export function snapShotTest(component, options = {}) {
 大部分查询节点都会返回 Wrapper 对象，API 可以进行链式调用。
 
 
-```JavaScript
+```js
 
 
 it('should render phone value correctly ', () => {
@@ -121,7 +129,7 @@ it('should render phone value correctly ', () => {
 可以通过 `setState` 和 `setProps` 接口模拟组件内外部状态变化，从而达到测试组件状态动态改变时响应的 UI 是否做出了正确改变。
 
 
-```JavaScript
+```js
 
 
 // 受控组件值变化验证，来自父组件 props value 值的变化
@@ -145,7 +153,7 @@ it('should click correctly', () => {
 
 
 
-```JavaScript
+```js
 
 const onChange = jest.fn()
 const mockEvent = {
