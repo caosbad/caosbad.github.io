@@ -5,7 +5,7 @@ url:              https://caosbad.github.io # Site url, without a slash at the e
 signoff:          "Caos" # Your name
 disqus_shortname: "mrcaos"
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
+google_analytics: "UA-112432163-1"
 share:            false # Turn on twitter and facebook share buttons
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
